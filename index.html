@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tatsunosuke Maeda | Portfolio</title>
+  <meta name="description" content="前田 達之助の自己紹介・ポートフォリオサイトです。">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ナビゲーションバー -->
+  <header class="header" id="header">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-mark">T</span>
+        <span class="logo-text">Tatsunosuke<span class="dot">.</span></span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#works" class="nav-link">Works</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- テーマ切り替えボタン（ライト/ダーク） -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="テーマ切り替え">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- モバイルハンバーガーボタン -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ヒーローセクション -->
+    <section class="hero" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge fade-in">
+            <span class="badge-dot"></span>
+            <span>AI-Driven Development & Automation</span>
+          </div>
+          <h1 class="hero-title fade-in">
+            こんにちは、<br>
+            <span class="gradient-text">前田 達之助</span> です。
+          </h1>
+          <p class="hero-subtitle fade-in">
+            AI-Driven Engineer & Automation Specialist
+          </p>
+          <p class="hero-description fade-in">
+            VS Code・Codex・Antigravityを活用した「AI駆動開発基盤」の標準化から、自律型AIエージェント構築、エンタープライズ業務の完全無人化まで。<br>
+            技術を直接的なビジネス価値と組織の生産性向上に変換する仕組みづくりを追求しています。
+          </p>
+          <div class="hero-cta fade-in">
+            <a href="#works" class="btn btn-primary">
+              実績・プロジェクトを見る
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#about" class="btn btn-secondary">私について</a>
+          </div>
+        </div>
+
+        <div class="hero-visual fade-in">
+          <div class="avatar-card">
+            <div class="avatar-glow"></div>
+            <div class="avatar-inner">
+              <div class="avatar-placeholder">
+                <svg viewBox="0 0 100 100" class="avatar-svg">
+                  <defs>
+                    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#4F46E5" />
+                      <stop offset="100%" stop-color="#06B6D4" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="50" cy="50" r="48" fill="url(#avatarGrad)" opacity="0.15" />
+                  <circle cx="50" cy="40" r="18" fill="url(#avatarGrad)" />
+                  <path d="M22 80 C 22 62, 35 58, 50 58 C 65 58, 78 62, 78 80 Z" fill="url(#avatarGrad)" />
+                </svg>
+              </div>
+              <div class="avatar-status">
+                <span class="status-pulse"></span>
+                <span>AI駆動開発を実践中</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 自己紹介セクション -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">私について</h2>
+          <p class="section-subtitle">堅牢な自動化設計と最先端AIの現場適用を牽引</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card intro-card fade-in">
+            <h3 class="about-card-title">「止まらない堅牢性」×「最先端AI」の融合</h3>
+            <p>
+              エンタープライズ規模の業務自動化（RPA / VBA）で培った「エラーで絶対に止めない厳格な例外設計思想」をベースに、現在は生成AI・自律型エージェントを活用した開発プロセスの標準化を推進しています。
+            </p>
+            <p>
+              50名規模の開発ユニット全体を対象とした「AI駆動開発（AIDD）基盤」のPoCから、Google Maps × AIによるSNSメディア自動運用まで、企画・検証・実装・組織展開までを一貫して一人でリードできる総合力が強みです。
+            </p>
+          </div>
+
+          <div class="about-card info-card fade-in">
+            <h3 class="about-card-title">基本情報</h3>
+            <ul class="info-list">
+              <li>
+                <span class="info-label">名前</span>
+                <span class="info-value">前田 達之助 (Tatsunosuke Maeda)</span>
+              </li>
+              <li>
+                <span class="info-label">関心領域</span>
+                <span class="info-value">AI駆動開発 / 自律型エージェント / 業務自動化</span>
+              </li>
+              <li>
+                <span class="info-label">趣味</span>
+                <span class="info-value">City Pop系HIPHOP、サウナ、スノーボード</span>
+              </li>
+              <li>
+                <span class="info-label">拠点</span>
+                <span class="info-value">日本 (Japan)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3つの特徴 -->
+        <div class="features-grid">
+          <div class="feature-item fade-in">
+            <div class="feature-icon">🤖</div>
+            <h4>AI駆動開発 & エージェント実装</h4>
+            <p>agent.md や各種プロンプトテンプレートを標準化し、どんな案件でも均一な粒度・高品質でアウトプットを再現できる基盤を構築。</p>
+          </div>
+          <div class="feature-item fade-in">
+            <div class="feature-icon">🛡️</div>
+            <h4>エンタープライズ品質の堅牢性</h4>
+            <p>大規模業務自動化の実務経験に裏打ちされた、例外処理やハルシネーション対策を徹底する信頼性の高いシステム設計。</p>
+          </div>
+          <div class="feature-item fade-in">
+            <div class="feature-icon">🚀</div>
+            <h4>0→1のワンストップ推進力</h4>
+            <p>要件定義からPoC検証、実装・保守、そして現場への利用促進・情報提供までを一気通貫で一人で完結させる実行力。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- スキルセクション -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-tag">Skills & Tools</span>
+          <h2 class="section-title">スキル & ツール</h2>
+          <p class="section-subtitle">扱える技術スタックや日常的に活用しているツール群</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- AI & Agent Architecture -->
+          <div class="skill-category fade-in">
+            <div class="category-header">
+              <div class="category-icon">🧠</div>
+              <h3>AI & Agent Architecture</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Gemini API (Grounding)</span>
+              <span class="skill-tag">OpenClaw (Local Gateway)</span>
+              <span class="skill-tag">Codex</span>
+              <span class="skill-tag">Antigravity</span>
+              <span class="skill-tag">agent.md 設計</span>
+              <span class="skill-tag">AI駆動開発 (AIDD)</span>
+              <span class="skill-tag">プロンプト標準化</span>
+            </div>
+          </div>
+
+          <!-- Automation & Development -->
+          <div class="skill-category fade-in">
+            <div class="category-header">
+              <div class="category-icon">⚙️</div>
+              <h3>Automation & Engineering</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Puppeteer (スクレイピング)</span>
+              <span class="skill-tag">UiPath (RPA)</span>
+              <span class="skill-tag">Excel VBA</span>
+              <span class="skill-tag">Python (補助スクリプト)</span>
+              <span class="skill-tag">Notion API (Upsert)</span>
+              <span class="skill-tag">SharePoint 運用</span>
+            </div>
+          </div>
+
+          <!-- Media & Growth -->
+          <div class="skill-category fade-in">
+            <div class="category-header">
+              <div class="category-icon">📈</div>
+              <h3>Media Growth & PdM</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">特化型TikTok / Instagram</span>
+              <span class="skill-tag">アナリティクス分析</span>
+              <span class="skill-tag">AIコンテンツ量産体制</span>
+              <span class="skill-tag">ニッチトップ戦略</span>
+              <span class="skill-tag">プロダクトマネジメント</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 実績・制作物セクション -->
+    <section class="section works" id="works">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-tag">Featured Projects</span>
+          <h2 class="section-title">プロジェクト & 開発実績</h2>
+          <p class="section-subtitle">各プロジェクトをクリックして詳細（Why / What / How / Result）をご確認いただけます</p>
+        </div>
+
+        <div class="works-grid">
+          <!-- Work Card 1: AI駆動開発基盤 -->
+          <article class="work-card fade-in">
+            <div class="work-thumb work-thumb-gradient-1">
+              <span class="thumb-emoji">🤖</span>
+            </div>
+            <div class="work-content">
+              <span class="work-impact">⚡ 工数約50%減 / 50名規模へ展開</span>
+              <div class="work-tags">
+                <span class="work-tag">AI駆動開発 (AIDD)</span>
+                <span class="work-tag">VS Code</span>
+                <span class="work-tag">Codex</span>
+                <span class="work-tag">Antigravity</span>
+                <span class="work-tag">agent.md</span>
+              </div>
+              <h3 class="work-title">開発ライフサイクル全域を標準化する「AI駆動開発基盤」の策定・PoC</h3>
+              <p class="work-desc">
+                要件定義・設計・実装・テスト・運用保守・エラー相談の全工程に対応する特化型AIエージェント群を設計。SharePointでテンプレートを一元管理し、ローカル環境でセキュアに動かす運用を一人で推進。
+              </p>
+              <div class="work-links">
+                <button class="work-link modal-open-btn" data-project="1">
+                  詳細を見る（Why / What / How / Result）
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Work Card 2: Google Maps × AI -->
+          <article class="work-card fade-in">
+            <div class="work-thumb work-thumb-gradient-2">
+              <span class="thumb-emoji">📍</span>
+            </div>
+            <div class="work-content">
+              <span class="work-impact">⚡ 数時間作業 → 約1分に短縮</span>
+              <div class="work-tags">
+                <span class="work-tag">Node.js</span>
+                <span class="work-tag">Puppeteer</span>
+                <span class="work-tag">Gemini 3.1 Pro</span>
+                <span class="work-tag">Notion API</span>
+              </div>
+              <h3 class="work-title">Google Maps × 生成AIによるSNSコンテンツ量産・DB構築システム</h3>
+              <p class="work-desc">
+                Google Mapsの動的スクレイピングからGemini（Google検索連携）によるハルシネーション抑制台本生成、NotionへのUpsert格納までを一気通貫で自動化。維持費ほぼゼロの量産体制を確立。
+              </p>
+              <div class="work-links">
+                <button class="work-link modal-open-btn" data-project="2">
+                  詳細を見る（Why / What / How / Result）
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Work Card 3: OpenClaw 自律型AIエージェント -->
+          <article class="work-card fade-in">
+            <div class="work-thumb work-thumb-gradient-3">
+              <span class="thumb-emoji">🕸️</span>
+            </div>
+            <div class="work-content">
+              <span class="work-impact">⚡ 複数サイト自律巡回・抽出</span>
+              <div class="work-tags">
+                <span class="work-tag">OpenClaw</span>
+                <span class="work-tag">Local Gateway</span>
+                <span class="work-tag">Gemini 3.1 Pro</span>
+                <span class="work-tag">自律型AI</span>
+              </div>
+              <h3 class="work-title">OpenClawを用いた自律型AIエージェント環境構築</h3>
+              <p class="work-desc">
+                OSSの『OpenClaw』を用いてローカルゲートウェイ（port: 18789）を構築。gemini-3.1-pro-previewを統合し、複数サイトを自律巡回してライブ情報やチケット情報を抽出・一覧化するボット基盤を開発。
+              </p>
+              <div class="work-links">
+                <button class="work-link modal-open-btn" data-project="3">
+                  詳細を見る（Why / What / How / Result）
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Work Card 4: エンタープライズ業務自動化 -->
+          <article class="work-card fade-in">
+            <div class="work-thumb work-thumb-gradient-4">
+              <span class="thumb-emoji">🏢</span>
+            </div>
+            <div class="work-content">
+              <span class="work-impact">⚡ 月数百時間削減 / エラー率0%</span>
+              <div class="work-tags">
+                <span class="work-tag">UiPath</span>
+                <span class="work-tag">Excel VBA</span>
+                <span class="work-tag">RPA</span>
+                <span class="work-tag">堅牢性設計</span>
+              </div>
+              <h3 class="work-title">エンタープライズ向け業務自動化（RPA / VBA）</h3>
+              <p class="work-desc">
+                社内の定型業務やデータ連携プロセスを無人化。「絶対に止まらない」厳密な例外処理と通知機構を組み込み、月間数百時間の工数削減とデータ処理完全無欠化（エラー率0%）を達成。
+              </p>
+              <div class="work-links">
+                <button class="work-link modal-open-btn" data-project="4">
+                  詳細を見る（Why / What / How / Result）
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Work Card 5: 特化型SNSメディア運用 -->
+          <article class="work-card fade-in">
+            <div class="work-thumb work-thumb-gradient-5">
+              <span class="thumb-emoji">📱</span>
+            </div>
+            <div class="work-content">
+              <span class="work-impact">⚡ 自動化基盤 × ニッチトップ戦略</span>
+              <div class="work-tags">
+                <span class="work-tag">TikTok</span>
+                <span class="work-tag">Instagram</span>
+                <span class="work-tag">自作自動化ツール</span>
+                <span class="work-tag">PdM思考</span>
+              </div>
+              <h3 class="work-title">特化型SNSメディアの立ち上げとグロース運用</h3>
+              <p class="work-desc">
+                リサーチや台本作成などの裏方作業を自作システムで自動化し、企画・演出にリソースを集中。ニッチトップ戦略（City Pop系HIPHOP、サウナ、スノボ）と技術を融合した持続的メディア運営。
+              </p>
+              <div class="work-links">
+                <button class="work-link modal-open-btn" data-project="5">
+                  詳細を見る（Why / What / How / Result）
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- お問い合わせセクション -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">お問い合わせ</h2>
+          <p class="section-subtitle">お仕事のご相談やご質問など、お気軽にご連絡ください</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- フォーム -->
+          <form class="contact-form fade-in" id="contact-form">
+            <div class="form-group">
+              <label for="name">お名前 <span class="required">*</span></label>
+              <input type="text" id="name" name="name" required placeholder="山田 太郎">
+            </div>
+            <div class="form-group">
+              <label for="email">メールアドレス <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="example@email.com">
+            </div>
+            <div class="form-group">
+              <label for="message">メッセージ <span class="required">*</span></label>
+              <textarea id="message" name="message" rows="5" required placeholder="お問い合わせ内容をご入力ください..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">
+              <span>送信する</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+            <div class="form-notice" id="form-notice"></div>
+          </form>
+
+          <!-- 連絡先・SNSリンク -->
+          <div class="contact-info fade-in">
+            <div class="info-box">
+              <h3>Direct Contact</h3>
+              <p>メールまたは各種SNSからメッセージをお送りいただけます。</p>
+              <a href="mailto:sample@example.com" class="contact-email">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>sample@example.com</span>
+              </a>
+            </div>
+
+            <div class="social-box">
+              <h3>Social Links</h3>
+              <div class="social-links">
+                <!-- X (Twitter) -->
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                  <span>X (Twitter)</span>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p class="copyright">&copy; 2026 Tatsunosuke Maeda. All rights reserved.</p>
+      <a href="#hero" class="back-to-top" aria-label="ページトップへ戻る">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- 詳細モーダルウィンドウ -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-header-content">
+          <span class="work-impact" id="modal-impact"></span>
+          <div class="work-tags" id="modal-tags"></div>
+          <h3 class="modal-title" id="modal-title"></h3>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="閉じる">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <!-- 動的に詳細コンテンツが挿入されます -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="modal-close-footer-btn">閉じる</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
